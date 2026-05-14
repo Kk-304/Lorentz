@@ -2,7 +2,7 @@
 
 > A hardware-efficient image encryption framework that replaces the traditional Runge–Kutta (RK4) numerical solver with a trained Artificial Neural Network (ANN) to generate Lorenz chaotic sequences in real time on FPGA.
 
-Companion repository for the B.Tech research paper *"FPGA-Based Image Encryption Using ANN-Driven Lorenz Chaotic System"* — Delhi Technological University, 2026.
+Companion repository for the IEEE-published paper "FPGA-Based Image Encryption Using ANN-Driven Lorenz Chaotic System," accepted at IEEE ICC-CNS 2026 (Delhi Technological University).
 
 ---
 
@@ -42,8 +42,8 @@ This project replaces RK4 with a tiny **3-5-3 feedforward ANN** that learns the 
 ## 📁 Repository Structure
 
 ```
-Lorentz/
-├── Lorentz Verilog code/
+fpga-lorenz-ann-encryption/
+├── Lorenz Verilog code/
 │   ├── Lorentz.v             # 3-5-3 ANN inference, fixed-point, combinational
 │   └── Lorentz_tb.v          # Testbench: reads +x= +y= +z= plusargs, prints next state
 │
@@ -53,8 +53,8 @@ Lorentz/
 │   ├── Snorlax_encrypted.png
 │   └── Snorlax_decrypted.png
 │
-├── Lorentz - 2.ipynb         # RK4 dataset → ANN training (Keras Tuner) → weight export
-├── Test Lorentz FPGA.ipynb   # Drives Lorentz_tb.v with iverilog/vvp, compares vs RK4
+├── Lorenz - 2.ipynb         # RK4 dataset → ANN training (Keras Tuner) → weight export
+├── Test Lorenz FPGA.ipynb   # Drives Lorentz_tb.v with iverilog/vvp, compares vs RK4
 └── Image Encryption.ipynb    # Full ACM + XOR encryption / decryption pipeline
 ```
 
